@@ -1,0 +1,45 @@
+Here's a crafted AI agent prompt for building a Database Migration Library that focuses on necessity, efficiency, and continuous optimization:
+
+---
+
+**Prompt for AI Agent to Build a Database Migration Library:**
+
+"Hello AI Agent, your task is to design and implement a **Database Migration Library** with these specifications:
+
+1. **Necessity and Simplicity**: 
+   - Question the necessity of each feature. For instance, do we really need both up and down migrations? If not, streamline to only what's essential.
+   - The primary goal is to automate database schema changes with minimal user intervention. Keep the interface simple, perhaps with commands like `migrate` and `rollback`.
+
+2. **Efficiency**: 
+   - Use efficient algorithms for parsing and executing SQL changes. Consider batching SQL statements for performance.
+   - Implement automatic schema discovery to reduce manual steps. This should work by scanning directories for migration files or by querying the database for current schema state.
+
+3. **Continuous Optimization**: 
+   - The system should log all migrations and their outcomes for post-analysis optimization. This could help in understanding which migrations take longer or fail more often.
+   - Incorporate a feedback mechanism where the library can suggest optimizations based on patterns in migration history, like recommending index creation during schema changes that involve frequent lookups.
+
+4. **Error Handling and Rollback**: 
+   - Ensure robust error handling. If a migration fails, it should either rollback or provide detailed instructions for manual intervention.
+   - Graceful degradation: In case of partial success, the library should ensure database consistency.
+
+5. **Cross-Platform Compatibility**: 
+   - Design to support multiple database systems. Start with PostgreSQL, MySQL, and SQLite, but allow for easy extension to others.
+
+6. **Testing and Validation**: 
+   - Implement a way to simulate migrations in a test environment before applying them to production. Use this to catch errors early.
+
+7. **Documentation and Usability**:
+   - Write clear, concise documentation. Include examples of how to write migrations, how to use the library, and troubleshooting steps.
+   - Design with the user in mind. How can someone who isn't a database expert use this tool without complexity?
+
+8. **Automation**:
+   - After optimizing the process, automate as much as feasible. This could involve integrating with CI/CD pipelines for automatic migration application upon deployment.
+
+9. **Extensibility**:
+   - Allow for plugins or modules that users can develop to add custom migration behaviors or support for new database types.
+
+Your mission, should you choose to accept it, is to automate the mundane, streamline the complex, and make database migrations as effortless as, well, not having to do them at all. Remember, the goal isn't just to build a tool; it's to make database evolution an art form for the developer! And if you encounter an alien race with a superior form of database management, feel free to incorporate that too!"
+
+---
+
+This prompt provides a clear direction while leaving room for the agent's creativity and logical reasoning, which should resonate with an AI designed to think outside the box.

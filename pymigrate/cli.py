@@ -48,5 +48,23 @@ def status():
     except Exception as e:
         click.echo(f"Error: {str(e)}", err=True)
 
+@cli.command()
+def analytics():
+    """Show migration analytics and performance statistics."""
+    try:
+        manager = MigrationManager()
+        stats = manager.get_analytics()
+        
+        click.echo("\nMigration Analytics:")
+        click.echo("===================")
+        click.echo(f"Total Migrations: {stats['total_migrations']}")
+        click.echo(f"Successful: {stats['successful_migrations']}")
+        click.echo(f"Failed: {stats['failed_migrations']}")
+        click.echo(f"Average Duration: {stats['average_duration']:.2f} seconds")
+        click.echo(f"Total Queries: {stats['total_queries']}")
+        click.echo(f"Total Rows Affected: {stats['total_rows_affected']}")
+    except Exception as e:
+        click.echo(f"Error: {str(e)}", err=True)
+
 if __name__ == '__main__':
     cli()
