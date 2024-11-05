@@ -106,5 +106,14 @@
     "error": null,
     "query_count": 0,
     "total_rows_affected": 0
+  },
+  {
+    "timestamp": "2024-11-05T07:53:06.699726",
+    "migration_file": "20241105070259_add_posts_table.sql",
+    "duration_seconds": 0.0002868175506591797,
+    "success": true,
+    "error": null,
+    "query_count": 0,
+    "total_rows_affected": 0
   }
 ]

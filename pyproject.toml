@@ -3,10 +3,10 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pymigrate"
+name = "schemaflux"
 version = "1.0.0"
 authors = [
-    { name = "PyMigrate Team" }
+    { name = "SchemaFlux Team" }
 ]
 description = "A lightweight PostgreSQL migration library with performance analytics"
 readme = "README.md"
@@ -26,7 +26,7 @@ dependencies = [
 ]
 
 [project.scripts]
-pymigrate = "pymigrate.cli:cli"
+schemaflux = "schemaflux.cli:cli"
 
 [tool.setuptools]
-packages = ["pymigrate"]
+packages = ["schemaflux"]

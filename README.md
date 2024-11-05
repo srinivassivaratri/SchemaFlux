@@ -1,10 +1,10 @@
-# PyMigrate
+# SchemaFlux
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://pypi.org/project/pymigrate/)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://pypi.org/project/schemaflux/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-A powerful, lightweight PostgreSQL migration library providing version-controlled schema management with integrated performance logging and analytics. PyMigrate helps you manage database changes with confidence through automated migrations, rollbacks, and comprehensive performance tracking.
+A powerful, lightweight PostgreSQL migration library providing version-controlled schema management with integrated performance logging and analytics. SchemaFlux helps you manage database changes with confidence through automated migrations, rollbacks, and comprehensive performance tracking.
 
 ## Features
 
@@ -20,10 +20,10 @@ A powerful, lightweight PostgreSQL migration library providing version-controlle
 
 ## Installation
 
-Install PyMigrate using pip:
+Install SchemaFlux using pip:
 
 ```bash
-pip install pymigrate
+pip install schemaflux
 ```
 
 ## Quick Start
@@ -45,7 +45,7 @@ export PGPASSWORD=your_password
 Create a new migration file:
 
 ```bash
-pymigrate create add_users_table
+schemaflux create add_users_table
 ```
 
 This creates a timestamped SQL migration file in the `migrations` directory:
@@ -68,7 +68,7 @@ DROP TABLE IF EXISTS users;
 Run pending migrations:
 
 ```bash
-pymigrate up
+schemaflux up
 ```
 
 ### 4. Check Status
@@ -76,7 +76,7 @@ pymigrate up
 View migration status:
 
 ```bash
-pymigrate status
+schemaflux status
 ```
 
 Example output:
@@ -92,7 +92,7 @@ Example output:
 Check migration performance metrics:
 
 ```bash
-pymigrate analytics
+schemaflux analytics
 ```
 
 Example output:
@@ -112,7 +112,7 @@ Example output:
 Rollback the last migration:
 
 ```bash
-pymigrate down
+schemaflux down
 ```
 
 ## API Reference
@@ -121,16 +121,16 @@ pymigrate down
 
 | Command | Description |
 |---------|-------------|
-| `pymigrate create <name>` | Create a new migration file |
-| `pymigrate up` | Apply pending migrations |
-| `pymigrate down` | Rollback last migration |
-| `pymigrate status` | Show migration status |
-| `pymigrate analytics` | Display performance metrics |
+| `schemaflux create <name>` | Create a new migration file |
+| `schemaflux up` | Apply pending migrations |
+| `schemaflux down` | Rollback last migration |
+| `schemaflux status` | Show migration status |
+| `schemaflux analytics` | Display performance metrics |
 
 ### Python API
 
 ```python
-from pymigrate import MigrationManager
+from schemaflux import MigrationManager
 
 # Initialize manager
 manager = MigrationManager()
@@ -153,7 +153,7 @@ manager.rollback_migration()
 
 ## Configuration
 
-PyMigrate uses environment variables for configuration:
+SchemaFlux uses environment variables for configuration:
 
 | Variable | Description | Default |
 |----------|-------------|---------|
@@ -180,7 +180,7 @@ DROP TABLE IF EXISTS example;
 
 ## Error Handling
 
-PyMigrate provides detailed error reporting:
+SchemaFlux provides detailed error reporting:
 - Migration failures are logged with timestamps
 - Rollback operations are automatically attempted on failure
 - Detailed error messages help identify issues quickly
@@ -220,4 +220,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Built with ❤️ by the PyMigrate Team
+Built with ❤️ by the SchemaFlux Team
