@@ -12,6 +12,7 @@ Description-Content-Type: text/markdown
 License-File: LICENSE
 Requires-Dist: click>=8.0.0
 Requires-Dist: psycopg2-binary>=2.9.0
+Requires-Dist: pymongo>=4.10.1
 Requires-Dist: setuptools>=75.3.0
 Requires-Dist: wheel>=0.44.0
 
