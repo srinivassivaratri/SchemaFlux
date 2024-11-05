@@ -19,6 +19,10 @@ args = "Migration CLI"
 task = "workflow.run"
 args = "Migration CLI Analytics"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Enhanced CLI Test"
+
 [[workflows.workflow]]
 name = "Migration CLI"
 author = "agent"
@@ -46,6 +50,20 @@ task = "packager.installForAll"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python3 main.py analytics"
+
+[[workflows.workflow]]
+name = "Enhanced CLI Test"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 main.py status && python3 main.py analytics"
 
 [deployment]
 run = ["sh", "-c", "python3 main.py up"]

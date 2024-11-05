@@ -7,5 +7,23 @@
     "error": null,
     "query_count": 2,
     "total_rows_affected": 1
+  },
+  {
+    "timestamp": "2024-11-05T07:03:45.346376",
+    "migration_file": "20241105070259_add_posts_table.sql",
+    "duration_seconds": 0.00027298927307128906,
+    "success": true,
+    "error": null,
+    "query_count": 0,
+    "total_rows_affected": 0
+  },
+  {
+    "timestamp": "2024-11-05T07:04:17.050525",
+    "migration_file": "20241105063812_initial_schema.sql (rollback)",
+    "duration_seconds": 0.47873449325561523,
+    "success": true,
+    "error": null,
+    "query_count": 2,
+    "total_rows_affected": 1
   }
 ]
