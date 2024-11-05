@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+pymigrate/__init__.py
+pymigrate/analytics.py
+pymigrate/cli.py
+pymigrate/connector.py
+pymigrate/core.py
+pymigrate/utils.py
+pymigrate/version.py
+pymigrate.egg-info/PKG-INFO
+pymigrate.egg-info/SOURCES.txt
+pymigrate.egg-info/dependency_links.txt
+pymigrate.egg-info/entry_points.txt
+pymigrate.egg-info/requires.txt
+pymigrate.egg-info/top_level.txt

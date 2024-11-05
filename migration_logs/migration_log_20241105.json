@@ -25,5 +25,77 @@
     "error": null,
     "query_count": 2,
     "total_rows_affected": 1
+  },
+  {
+    "timestamp": "2024-11-05T07:19:12.557719",
+    "migration_file": "20241105063812_initial_schema.sql",
+    "duration_seconds": 0.550739049911499,
+    "success": true,
+    "error": null,
+    "query_count": 2,
+    "total_rows_affected": 1
+  },
+  {
+    "timestamp": "2024-11-05T07:19:12.558288",
+    "migration_file": "20241105070259_add_posts_table.sql",
+    "duration_seconds": 8.368492126464844e-05,
+    "success": true,
+    "error": null,
+    "query_count": 0,
+    "total_rows_affected": 0
+  },
+  {
+    "timestamp": "2024-11-05T07:19:26.415961",
+    "migration_file": "20241105070259_add_posts_table.sql",
+    "duration_seconds": 0.0004010200500488281,
+    "success": true,
+    "error": null,
+    "query_count": 0,
+    "total_rows_affected": 0
+  },
+  {
+    "timestamp": "2024-11-05T07:19:30.101229",
+    "migration_file": "20241105070259_add_posts_table.sql",
+    "duration_seconds": 0.0003943443298339844,
+    "success": true,
+    "error": null,
+    "query_count": 0,
+    "total_rows_affected": 0
+  },
+  {
+    "timestamp": "2024-11-05T07:19:38.185280",
+    "migration_file": "20241105070259_add_posts_table.sql",
+    "duration_seconds": 0.0002923011779785156,
+    "success": true,
+    "error": null,
+    "query_count": 0,
+    "total_rows_affected": 0
+  },
+  {
+    "timestamp": "2024-11-05T07:21:06.366777",
+    "migration_file": "20241105070259_add_posts_table.sql",
+    "duration_seconds": 0.00028061866760253906,
+    "success": true,
+    "error": null,
+    "query_count": 0,
+    "total_rows_affected": 0
+  },
+  {
+    "timestamp": "2024-11-05T07:22:01.163171",
+    "migration_file": "20241105070259_add_posts_table.sql",
+    "duration_seconds": 0.0002799034118652344,
+    "success": true,
+    "error": null,
+    "query_count": 0,
+    "total_rows_affected": 0
+  },
+  {
+    "timestamp": "2024-11-05T07:22:27.417234",
+    "migration_file": "20241105070259_add_posts_table.sql",
+    "duration_seconds": 0.0002665519714355469,
+    "success": true,
+    "error": null,
+    "query_count": 0,
+    "total_rows_affected": 0
   }
 ]
