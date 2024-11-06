@@ -1,37 +1,23 @@
-# SchemaFlux
+# SchemaFlux 🔄
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://pypi.org/project/schemaflux/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+A powerful PostgreSQL migration tool that makes database schema management a breeze. Track changes, monitor performance, and deploy with confidence.
 
-A powerful, lightweight PostgreSQL migration library providing version-controlled schema management with integrated performance logging and analytics. SchemaFlux helps you manage database changes with confidence through automated migrations, rollbacks, and comprehensive performance tracking.
+## Why SchemaFlux?
 
-## Features
+Managing database schema changes in production is hard. SchemaFlux solves this by providing:
+- Version-controlled migrations with automatic rollbacks
+- Real-time performance analytics
+- Simple CLI interface
+- Detailed error reporting
 
-- 📦 **PostgreSQL Support**: Robust support for PostgreSQL databases
-- 🔄 **Version Control**: Track and manage database schema versions
-- ⬆️ **Bidirectional Migrations**: Support for both up and down migrations
-- 📊 **Migration Analytics**: Built-in performance logging and statistics
-- 🚀 **Batch Operations**: Efficient batch SQL execution capabilities
-- 🎯 **Status Tracking**: Real-time migration status monitoring
-- 🔍 **Failure Reporting**: Detailed error tracking and reporting
-- 🎨 **Interactive CLI**: Beautiful command-line interface with progress tracking
-- 📈 **Performance Metrics**: Track execution time, queries, and affected rows
+## Quick Start
 
-## Installation
-
-Install SchemaFlux using pip:
-
+1. Install:
 ```bash
 pip install schemaflux
 ```
 
-## Quick Start
-
-### 1. Set Environment Variables
-
-Configure your PostgreSQL connection:
-
+2. Configure:
 ```bash
 export PGHOST=localhost
 export PGPORT=5432
@@ -40,184 +26,65 @@ export PGUSER=your_username
 export PGPASSWORD=your_password
 ```
 
-### 2. Create a Migration
-
-Create a new migration file:
-
+3. Create a migration:
 ```bash
 schemaflux create add_users_table
 ```
 
-This creates a timestamped SQL migration file in the `migrations` directory:
-
-```sql
--- UP
-CREATE TABLE users (
-    id SERIAL PRIMARY KEY,
-    username VARCHAR(100) NOT NULL UNIQUE,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- DOWN
-DROP TABLE IF EXISTS users;
-```
-
-### 3. Apply Migrations
-
-Run pending migrations:
-
+4. Apply it:
 ```bash
 schemaflux up
 ```
 
-### 4. Check Status
-
-View migration status:
-
-```bash
-schemaflux status
-```
-
-Example output:
-```
-📊 Migration Status
-══════════════════════════════════════════════════
-✓ 20241105063812_initial_schema.sql
-✗ 20241105070259_add_posts_table.sql
-```
-
-### 5. View Analytics
-
-Check migration performance metrics:
-
-```bash
-schemaflux analytics
-```
-
-Example output:
-```
-📈 Migration Analytics
-══════════════════════════════════════════════════
-🔢 Total Migrations   : 12
-✅ Successful         : 12
-❌ Failed             : 0
-⏱️  Average Duration : 0.13 seconds
-📝 Total Queries      : 6
-📊 Total Rows Affected: 3
-```
-
-### 6. Rollback
-
-Rollback the last migration:
-
-```bash
-schemaflux down
-```
-
-## API Reference
+## Usage
 
 ### CLI Commands
 
-| Command | Description |
-|---------|-------------|
-| `schemaflux create <name>` | Create a new migration file |
-| `schemaflux up` | Apply pending migrations |
-| `schemaflux down` | Rollback last migration |
-| `schemaflux status` | Show migration status |
-| `schemaflux analytics` | Display performance metrics |
+```bash
+schemaflux create <name>  # Create migration
+schemaflux up            # Apply migrations
+schemaflux down          # Rollback
+schemaflux status        # Check status
+schemaflux analytics     # View metrics
+```
 
 ### Python API
 
 ```python
 from schemaflux import MigrationManager
 
-# Initialize manager
 manager = MigrationManager()
-
-# Create migration
 manager.create_migration("add_users_table")
-
-# Apply migrations
 manager.apply_migrations()
-
-# Check status
-status = manager.show_status()
-
-# Get analytics
-metrics = manager.get_analytics()
-
-# Rollback
-manager.rollback_migration()
 ```
 
-## Configuration
-
-SchemaFlux uses environment variables for configuration:
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `PGHOST` | PostgreSQL host | localhost |
-| `PGPORT` | PostgreSQL port | 5432 |
-| `PGDATABASE` | Database name | None |
-| `PGUSER` | Database user | None |
-| `PGPASSWORD` | Database password | None |
-
-## Migration File Format
-
-Migration files support both UP and DOWN migrations:
+### Migration Format
 
 ```sql
 -- UP
-CREATE TABLE example (
+CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
+    username VARCHAR(100) NOT NULL
 );
 
 -- DOWN
-DROP TABLE IF EXISTS example;
+DROP TABLE IF EXISTS users;
 ```
-
-## Error Handling
-
-SchemaFlux provides detailed error reporting:
-- Migration failures are logged with timestamps
-- Rollback operations are automatically attempted on failure
-- Detailed error messages help identify issues quickly
 
 ## Contributing
 
-We welcome contributions! Here's how you can help:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-Please ensure your PR includes:
-- Clear description of changes
-- Updated tests if applicable
-- Documentation updates
-
-## Best Practices
-
-1. Always include DOWN migrations for rollback capability
-2. Use meaningful migration names
-3. Keep migrations atomic and focused
-4. Test migrations in development before production
-5. Review analytics to optimize performance
+1. Fork it
+2. Create your branch (`git checkout -b feature/cool-thing`)
+3. Commit changes (`git commit -am 'Added cool thing'`)
+4. Push (`git push origin feature/cool-thing`)
+5. Open a PR
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- PostgreSQL community for the amazing database
-- Click library for the beautiful CLI interface
-- All contributors who have helped shape this project
+MIT © SchemaFlux Team
 
 ---
 
-Built with ❤️ by the SchemaFlux Team
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://pypi.org/project/schemaflux/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
